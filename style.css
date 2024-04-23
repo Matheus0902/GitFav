@@ -1,0 +1,167 @@
+* {
+  padding: 0;
+  margin: 0;
+  box-sizing: border-box;
+  text-decoration: none;
+}
+
+:root {
+  font-size: 62.5%;
+
+  --text-color: #E1E1E6;
+
+  --input-ph-color: #7C7C8A;
+  --input-bg-color: #06181C;
+
+  --button-bg-color: #065E7C;
+  --button-color: #F75A68;
+
+  --thead-bg-color: #092D38;
+  --tbody-bg-one-color:rgba(6, 22, 27, 0.50);
+  --tbody-bg-two-color: #06181C;
+  --tb-border-color: #4A808C;
+}
+
+.sr-only {
+  position: absolute;
+  width: 1px;
+  height: 1px;
+  padding: 0;
+  margin: -1px;
+  overflow: hidden;
+  clip: rect(0, 0, 0, 0);
+  white-space: nowrap;
+  border-width: 0;
+}
+
+body {
+  font-size: 1.6rem;
+  padding: 0 16rem;
+  background-color: rgb(15, 15, 15);
+}
+
+body * {
+  color: var(--text-color);
+  font-family: "Roboto", sans serife;
+}
+
+header {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  margin-top: 12rem;
+}
+
+#search {
+  width: 60rem;
+  display: flex;
+  gap: .8rem;
+}
+
+#search input {
+  width: 100%;
+  padding: 1.6rem;
+  background-color: var(--input-bg-color);
+  border: 0;
+  font-size: 1.6rem;
+  border-radius: .5rem;
+}
+
+#search button {
+  padding: 1.2rem 3.2rem;
+  background-color: var(--button-bg-color);
+  border: 0;
+  border-radius: .5rem;
+
+  font-size: 1.4rem;
+  font-weight: 700;
+  line-height: 2.4rem;
+  text-transform: uppercase;
+
+  display: flex;
+  align-items: center;
+  gap: .8rem;
+
+  cursor: pointer;
+}
+
+table {
+  width: 100%;
+  border-collapse: collapse;
+  margin-top: 8rem;
+  margin-bottom: 8rem;
+}
+
+thead tr th {
+  background-color: var(--thead-bg-color);
+  padding: 1.6rem 4rem;
+  text-align: left;
+
+  font-size: 2rem;
+  font-weight: 700;
+  line-height: 160%;
+}
+
+thead tr th:first-child {
+  border-top-left-radius: 1rem;
+}
+
+thead tr th:last-child {
+  border-top-right-radius: 1rem;
+}
+
+tbody tr:nth-child(odd) {
+  background-color: var(--tbody-bg-one-color);
+}
+
+tbody tr:nth-child(even) {
+  background-color: var(--tbody-bg-two-color);
+}
+
+tbody tr td {
+  padding: 1.6rem 4rem;
+  font-size: 20px;
+  font-weight: 700;
+  line-height: 160%;
+}
+
+tbody tr:last-child td:first-child {
+  border-bottom-left-radius: 1rem;
+}
+
+tbody tr:last-child td:last-child {
+  border-bottom-right-radius: 1rem;
+}
+
+tbody tr td span {
+  font-weight: 400;
+}
+
+
+.user {
+  display: flex;
+  gap: 1.6rem;
+  align-items: center;
+}
+
+.user img {
+  width: 5.6rem;
+  height: 5.6rem;
+  border-radius: 50%;
+
+  transition: .5s;
+}
+
+.user img:hover {
+  transform: scale(1.4);
+}
+
+.remove {
+  font-size: 2rem;
+  font-weight: 700;
+  line-height: 160%;
+  background: 0;
+  border: 0;
+  color: var(--button-color);
+  cursor: pointer;
+}
